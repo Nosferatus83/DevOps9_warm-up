@@ -8,3 +8,7 @@
     apt:
      name: nginx
      state: present
+  - name: Edit config sshd
+    lineinfile:
+     dest: /var/www/html/index.html
+     line: '<h1><p><script> document.write(new Date().toLocaleDateString()); </script></p></h1>'
